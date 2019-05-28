@@ -7,11 +7,11 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: setTimeout(() => { this.setState({ loading: false }) }, 4000)
+      withloading: setTimeout(() => { this.setState({ withloading:false }) }, 4000)
     };
   }
   Loader = (Component) => {
-    if (!this.state.loading) return Component
+    if (!this.state.withloading) return Component
     return (<span className="spin">
       <div className="loadingLogo">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"  />
